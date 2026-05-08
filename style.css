@@ -171,14 +171,32 @@ button:hover,
 
 .event-card{
   background:white;
-  padding:40px 25px;
+  padding:50px 35px;
   border-radius:25px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.05);
 }
 
-.event-card h3{
+.event-label{
+  display:block;
+  letter-spacing:4px;
+  font-size:12px;
   margin-bottom:20px;
-  font-size:24px;
+  color:#b08b67;
+  text-transform:uppercase;
+}
+
+.event-title{
   font-family:'Cormorant Garamond', serif;
+  font-size:38px;
+  margin-bottom:15px;
+  font-weight:500;
+  color:#3d3028;
+}
+
+.event-text{
+  font-size:16px;
+  line-height:1.8;
+  color:#6d5b4d;
 }
 
 /* GALLERY */
@@ -195,6 +213,11 @@ button:hover,
   height:420px;
   object-fit:cover;
   border-radius:25px;
+  transition:0.4s;
+}
+
+.gallery img:hover{
+  transform:scale(1.02);
 }
 
 /* MENU */
@@ -256,6 +279,10 @@ button:hover,
 
   button{
     width:100%;
+  }
+
+  .event-title{
+    font-size:30px;
   }
 
 }
