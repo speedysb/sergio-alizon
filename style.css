@@ -17,6 +17,8 @@ body{
 
 /* NAVBAR */
 
+/* NAVBAR */
+
 .navbar{
   position:fixed;
   top:0;
@@ -35,11 +37,7 @@ body{
   font-size:32px;
 }
 
-.menu-toggle{
-  display:none;
-  font-size:32px;
-  cursor:pointer;
-}
+/* DESKTOP LINKS */
 
 .nav-links{
   display:flex;
@@ -55,6 +53,44 @@ body{
   font-size:12px;
 }
 
+/* HAMBURGER */
+
+.menu-toggle{
+  display:none;
+  font-size:32px;
+  cursor:pointer;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .menu-toggle{
+    display:block;
+  }
+
+  .nav-links{
+    position:absolute;
+    top:80px;
+    left:0;
+    width:100%;
+    background:#efe4d7;
+
+    flex-direction:column;
+    align-items:center;
+
+    padding:30px 0;
+
+    gap:18px;
+
+    display:none;
+  }
+
+  .nav-links.show-menu{
+    display:flex;
+  }
+
+}
 /* HERO */
 
 .hero{
