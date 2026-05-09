@@ -169,8 +169,10 @@ button:hover{
   height:100%;
   object-fit:cover;
   position:absolute;
+  top:0;
+  left:0;
   opacity:0;
-  transition:1.5s;
+  transition:0.5s;
 }
 
 .story-slide.active{
@@ -194,12 +196,51 @@ button:hover{
   height:100%;
   object-fit:cover;
   position:absolute;
+  top:0;
+  left:0;
   opacity:0;
-  transition:1.2s;
+  transition:0.5s;
 }
 
-.active-favorite{
+.favorite-slide.active-favorite{
   opacity:1;
+}
+
+/* ARROWS */
+
+.arrow{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  width:55px;
+  height:55px;
+  border-radius:50%;
+  border:none;
+  background:rgba(255,255,255,0.75);
+  color:#3d3028;
+  font-size:30px;
+  cursor:pointer;
+  z-index:20;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  padding:0;
+
+  transition:0.3s;
+}
+
+.arrow:hover{
+  background:white;
+}
+
+.left-arrow{
+  left:20px;
+}
+
+.right-arrow{
+  right:20px;
 }
 
 /* EVENT */
