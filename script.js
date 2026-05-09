@@ -49,9 +49,7 @@ function prevStorySlide(){
 
 }
 
-/* =========================
-   FAVORITE PHOTOS SLIDER
-========================= */
+/* FAVORITE SLIDER */
 
 const favoriteSlides =
 document.querySelectorAll(".favorite-slide");
@@ -100,9 +98,7 @@ function prevFavoriteSlide(){
 
 }
 
-/* =========================
-   MOBILE MENU
-========================= */
+/* MOBILE MENU */
 
 const menuToggle =
 document.getElementById("menu-toggle");
