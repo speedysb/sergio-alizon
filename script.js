@@ -1,30 +1,44 @@
+/* STORY SLIDESHOW */
 
-function sendMessage(){
+const storySlides = document.querySelectorAll(".story-slide");
 
-  let message =
-  "Quiero compartir contigo este día tan especial, cuenta con nuestra presencia. 💍";
+let currentStory = 0;
 
-  let phone = "13057201027";
+setInterval(() => {
 
-  let url =
-  `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+  storySlides[currentStory].classList.remove("active");
 
-  window.open(url, "_blank");
+  currentStory++;
 
-}
+  if(currentStory >= storySlides.length){
+    currentStory = 0;
+  }
 
-/* FOOD OPTIONS */
+  storySlides[currentStory].classList.add("active");
 
-function selectFood(food){
+}, 7000);
 
-  let message =
-  `Hola, quiero escoger ${food} como mi opción de menú 🍽️`;
+/* FAVORITE PHOTOS AUTO ANIMATION */
 
-  let phone = "13057201027";
+const favoritePhotos =
+document.querySelectorAll(".favorite-gallery img");
 
-  let url =
-  `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+let currentPhoto = 0;
 
-  window.open(url, "_blank");
+setInterval(() => {
 
-}
+  favoritePhotos.forEach(photo => {
+    photo.style.opacity = "0.4";
+    photo.style.transform = "scale(0.96)";
+  });
+
+  favoritePhotos[currentPhoto].style.opacity = "1";
+  favoritePhotos[currentPhoto].style.transform = "scale(1.05)";
+
+  currentPhoto++;
+
+  if(currentPhoto >= favoritePhotos.length){
+    currentPhoto = 0;
+  }
+
+}, 2500);
