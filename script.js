@@ -49,14 +49,6 @@ function prevStorySlide(){
 
 }
 
-/* AUTO CHANGE EVERY 3 SECONDS */
-
-setInterval(() => {
-
-  nextStorySlide();
-
-}, 3000);
-
 /* =========================
    FAVORITE PHOTOS SLIDER
 ========================= */
@@ -107,14 +99,6 @@ function prevFavoriteSlide(){
   showFavoriteSlide(currentFavorite);
 
 }
-
-/* AUTO CHANGE EVERY 2.5 SECONDS */
-
-setInterval(() => {
-
-  nextFavoriteSlide();
-
-}, 2500);
 
 /* =========================
    MOBILE MENU
