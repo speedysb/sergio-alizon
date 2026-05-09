@@ -15,15 +15,17 @@ body{
   color:#3d3028;
 }
 
+/* NAVBAR */
+
 .navbar{
   position:fixed;
   top:0;
   width:100%;
-  padding:20px 8%;
+  padding:18px 8%;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  background:rgba(239,228,215,0.85);
+  background:rgba(239,228,215,0.88);
   backdrop-filter:blur(10px);
   z-index:1000;
 }
@@ -33,11 +35,16 @@ body{
   font-size:32px;
 }
 
+.menu-toggle{
+  display:none;
+  font-size:32px;
+  cursor:pointer;
+}
+
 .nav-links{
   display:flex;
   gap:20px;
   list-style:none;
-  flex-wrap:wrap;
 }
 
 .nav-links a{
@@ -47,6 +54,8 @@ body{
   letter-spacing:2px;
   font-size:12px;
 }
+
+/* HERO */
 
 .hero{
   height:100vh;
@@ -100,6 +109,8 @@ button{
   text-transform:uppercase;
 }
 
+/* SECTIONS */
+
 .section,
 .event-section,
 .menu-section,
@@ -126,6 +137,8 @@ button{
   color:#6b5b50;
 }
 
+/* STORY SLIDER */
+
 .story-slider{
   width:100%;
   max-width:900px;
@@ -148,6 +161,33 @@ button{
 .story-slide.active{
   opacity:1;
 }
+
+/* FAVORITE SLIDER */
+
+.favorite-slider{
+  width:100%;
+  max-width:900px;
+  height:520px;
+  margin:60px auto 0;
+  position:relative;
+  overflow:hidden;
+  border-radius:30px;
+}
+
+.favorite-slide{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  position:absolute;
+  opacity:0;
+  transition:1.2s;
+}
+
+.active-favorite{
+  opacity:1;
+}
+
+/* EVENT */
 
 .event-grid{
   display:grid;
@@ -181,12 +221,16 @@ button{
   color:#6d5b4d;
 }
 
+/* FORMAL */
+
 .formal-text{
   font-size:48px;
   font-family:'Cormorant Garamond',serif;
   color:#b08b67;
   animation:pulse 2s infinite;
 }
+
+/* MENU */
 
 .menu-options{
   display:flex;
@@ -196,23 +240,13 @@ button{
   flex-wrap:wrap;
 }
 
-.favorite-gallery{
-  margin-top:50px;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:18px;
-}
-
-.favorite-gallery img{
-  width:100%;
-  height:260px;
-  object-fit:cover;
-  border-radius:22px;
-}
+/* REGALOS */
 
 .regalos{
   background:#e8d8ca;
 }
+
+/* FOOTER */
 
 .footer{
   background:#dcc7b5;
@@ -234,11 +268,29 @@ button{
 
 }
 
+/* MOBILE */
+
 @media(max-width:768px){
 
-  .navbar{
+  .menu-toggle{
+    display:block;
+  }
+
+  .nav-links{
+    position:absolute;
+    top:80px;
+    left:0;
+    width:100%;
+    background:#efe4d7;
     flex-direction:column;
+    align-items:center;
+    padding:30px 0;
+    display:none;
     gap:20px;
+  }
+
+  .nav-links.show-menu{
+    display:flex;
   }
 
   h1{
@@ -252,7 +304,8 @@ button{
     font-size:42px;
   }
 
-  .story-slider{
+  .story-slider,
+  .favorite-slider{
     height:340px;
   }
 
