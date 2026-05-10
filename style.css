@@ -74,7 +74,7 @@ body{
   width:100%;
   height:100vh;
 
-  background-image:url('images/IMG_3567.JPG');
+  background-image:url('images/background.jpg');
 
   background-size:cover;
   background-position:center;
@@ -141,7 +141,7 @@ h1{
   margin:20px 0 35px;
 }
 
-/* HERO COUNTDOWN */
+/* COUNTDOWN */
 
 .hero #countdown{
   margin-top:40px;
@@ -262,7 +262,7 @@ button:hover{
   z-index:2;
 }
 
-/* FAVORITE SLIDER */
+/* FAVORITES */
 
 .favorite-slider{
   width:100%;
@@ -385,16 +385,26 @@ button:hover{
   line-height:1.7;
 }
 
-/* SONG */
+/* MUSIC */
 
-.song-video{
-  max-width:900px;
-  margin:60px auto 0;
+.music-card{
+  max-width:600px;
+  margin:50px auto 0;
+
+  background:white;
+
+  padding:40px;
 
   border-radius:30px;
-  overflow:hidden;
 
-  box-shadow:0 15px 40px rgba(0,0,0,0.12);
+  box-shadow:0 15px 40px rgba(0,0,0,0.08);
+}
+
+.music-playing{
+  font-size:24px;
+  color:#7b9272;
+  font-family:'Cormorant Garamond',serif;
+  letter-spacing:2px;
 }
 
 /* MENU */
