@@ -37,7 +37,7 @@ body{
   z-index:1001;
 }
 
-/* DESKTOP NAV */
+/* NAV LINKS */
 
 .nav-links{
   display:flex;
@@ -51,6 +51,11 @@ body{
   text-transform:uppercase;
   letter-spacing:2px;
   font-size:12px;
+  transition:0.3s;
+}
+
+.nav-links a:hover{
+  color:#8ea284;
 }
 
 /* HAMBURGER */
@@ -66,7 +71,6 @@ body{
 
 .hero{
   position:relative;
-
   width:100%;
   height:100vh;
 
@@ -137,6 +141,49 @@ h1{
   margin:20px 0 35px;
 }
 
+/* HERO COUNTDOWN */
+
+.hero #countdown{
+  margin-top:40px;
+
+  display:flex;
+  justify-content:center;
+  gap:18px;
+  flex-wrap:wrap;
+}
+
+.hero .count-box{
+  width:115px;
+  height:115px;
+
+  background:rgba(255,255,255,0.18);
+
+  backdrop-filter:blur(10px);
+
+  border:1px solid rgba(255,255,255,0.2);
+
+  border-radius:30px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+.hero .count-box span{
+  color:white;
+  font-size:38px;
+  font-family:'Cormorant Garamond',serif;
+}
+
+.hero .count-box p{
+  color:white;
+  margin-top:8px;
+  letter-spacing:2px;
+  font-size:12px;
+  text-transform:uppercase;
+}
+
 /* BUTTONS */
 
 button{
@@ -162,8 +209,7 @@ button:hover{
 .section,
 .event-section,
 .menu-section,
-.footer,
-.countdown-section{
+.footer{
   padding:120px 25px;
   text-align:center;
   animation:fadeUp 1s ease;
@@ -172,8 +218,7 @@ button:hover{
 .section h2,
 .event-section h2,
 .menu-section h2,
-.footer h3,
-.countdown-section h2{
+.footer h3{
   font-size:60px;
   font-family:'Cormorant Garamond',serif;
   margin-bottom:20px;
@@ -288,46 +333,6 @@ button:hover{
   right:20px;
 }
 
-/* COUNTDOWN */
-
-.countdown-section{
-  background:#edf3ea;
-}
-
-#countdown{
-  display:flex;
-  justify-content:center;
-  gap:25px;
-  flex-wrap:wrap;
-  margin-top:50px;
-}
-
-.count-box{
-  width:150px;
-  height:150px;
-  background:white;
-  border-radius:30px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  box-shadow:0 10px 30px rgba(0,0,0,0.05);
-}
-
-.count-box span{
-  font-size:50px;
-  font-family:'Cormorant Garamond',serif;
-  color:#7b9272;
-}
-
-.count-box p{
-  margin-top:10px;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  font-size:13px;
-  color:#7b9272;
-}
-
 /* EVENT */
 
 .event-grid{
@@ -380,6 +385,18 @@ button:hover{
   line-height:1.7;
 }
 
+/* SONG */
+
+.song-video{
+  max-width:900px;
+  margin:60px auto 0;
+
+  border-radius:30px;
+  overflow:hidden;
+
+  box-shadow:0 15px 40px rgba(0,0,0,0.12);
+}
+
 /* MENU */
 
 .menu-options{
@@ -390,27 +407,34 @@ button:hover{
   flex-wrap:wrap;
 }
 
-/* RSVP BUTTONS */
-
-.rsvp-buttons{
-  display:flex;
-  justify-content:center;
-  gap:20px;
-  flex-wrap:wrap;
-  margin-top:40px;
-}
-
 /* REGALOS */
 
 .regalos{
   background:#e8efe4;
 }
 
-/* FOOTER */
+.zelle-text{
+  margin-top:30px;
+  font-size:24px;
+  color:#7b9272;
+  font-family:'Cormorant Garamond',serif;
+}
+
+/* RSVP */
 
 .footer{
   background:#dfe8dc;
 }
+
+.rsvp-buttons{
+  display:flex;
+  justify-content:center;
+  gap:35px;
+  flex-wrap:wrap;
+  margin-top:50px;
+}
+
+/* ANIMATIONS */
 
 @keyframes pulse{
 
@@ -496,8 +520,7 @@ button:hover{
   .section h2,
   .event-section h2,
   .menu-section h2,
-  .footer h3,
-  .countdown-section h2{
+  .footer h3{
     font-size:42px;
   }
 
@@ -506,13 +529,13 @@ button:hover{
     height:340px;
   }
 
-  .count-box{
-    width:120px;
-    height:120px;
+  .hero .count-box{
+    width:90px;
+    height:90px;
   }
 
-  .count-box span{
-    font-size:38px;
+  .hero .count-box span{
+    font-size:28px;
   }
 
   button{
