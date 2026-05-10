@@ -1,3 +1,7 @@
+/* =========================
+   HISTORIA SLIDER
+========================= */
+
 const storySlides =
 document.querySelectorAll(".story-slide");
 
@@ -45,7 +49,9 @@ function prevStorySlide(){
 
 }
 
-/* FAVORITE SLIDER */
+/* =========================
+   FAVORITE SLIDER
+========================= */
 
 const favoriteSlides =
 document.querySelectorAll(".favorite-slide");
@@ -79,22 +85,17 @@ function nextFavoriteSlide(){
 
 }
 
-function prevFavoriteSlide(){
+/* AUTO FAVORITES */
 
-  currentFavorite--;
+setInterval(() => {
 
-  if(currentFavorite < 0){
+  nextFavoriteSlide();
 
-    currentFavorite =
-    favoriteSlides.length - 1;
+}, 2000);
 
-  }
-
-  showFavoriteSlide(currentFavorite);
-
-}
-
-/* MOBILE MENU */
+/* =========================
+   MOBILE MENU
+========================= */
 
 const menuToggle =
 document.getElementById("menu-toggle");
@@ -122,3 +123,59 @@ navItems.forEach(item => {
   });
 
 });
+
+/* =========================
+   COUNTDOWN TIMER
+========================= */
+
+const countdown =
+document.getElementById("countdown");
+
+const weddingDate =
+new Date("July 18, 2026 14:00:00").getTime();
+
+setInterval(() => {
+
+  const now =
+  new Date().getTime();
+
+  const distance =
+  weddingDate - now;
+
+  const days =
+  Math.floor(distance / (1000 * 60 * 60 * 24));
+
+  const hours =
+  Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+  const minutes =
+  Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+  const seconds =
+  Math.floor((distance % (1000 * 60)) / 1000);
+
+  countdown.innerHTML = `
+
+    <div class="count-box">
+      <span>${days}</span>
+      <p>Días</p>
+    </div>
+
+    <div class="count-box">
+      <span>${hours}</span>
+      <p>Horas</p>
+    </div>
+
+    <div class="count-box">
+      <span>${minutes}</span>
+      <p>Min</p>
+    </div>
+
+    <div class="count-box">
+      <span>${seconds}</span>
+      <p>Seg</p>
+    </div>
+
+  `;
+
+}, 1000);
