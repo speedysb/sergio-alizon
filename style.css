@@ -9,7 +9,7 @@ html{
 }
 
 body{
-  background:#efe4d7;
+  background:#f5f1ea;
   font-family:'Montserrat',sans-serif;
   overflow-x:hidden;
   color:#3d3028;
@@ -26,7 +26,7 @@ body{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  background:rgba(239,228,215,0.92);
+  background:rgba(245,241,234,0.92);
   backdrop-filter:blur(10px);
   z-index:1000;
 }
@@ -70,7 +70,7 @@ body{
   width:100%;
   height:100vh;
 
-  background-image:url('images/IMG_3567.JPG');
+  background-image:url('images/background.jpg');
 
   background-size:cover;
   background-position:center;
@@ -83,6 +83,26 @@ body{
   text-align:center;
 
   overflow:hidden;
+}
+
+.hero::after{
+  content:'';
+
+  position:absolute;
+
+  width:100%;
+  height:100%;
+
+  background:
+  radial-gradient(circle,
+  rgba(255,255,255,0.18) 1px,
+  transparent 1px);
+
+  background-size:40px 40px;
+
+  animation:float 25s linear infinite;
+
+  opacity:0.35;
 }
 
 .overlay{
@@ -121,7 +141,7 @@ h1{
 
 button{
   border:none;
-  background:#d7b28a;
+  background:#b7c7ae;
   color:white;
   padding:16px 42px;
   border-radius:50px;
@@ -133,7 +153,7 @@ button{
 }
 
 button:hover{
-  background:#c79d70;
+  background:#9fb194;
   transform:translateY(-3px);
 }
 
@@ -142,15 +162,18 @@ button:hover{
 .section,
 .event-section,
 .menu-section,
-.footer{
+.footer,
+.countdown-section{
   padding:120px 25px;
   text-align:center;
+  animation:fadeUp 1s ease;
 }
 
 .section h2,
 .event-section h2,
 .menu-section h2,
-.footer h3{
+.footer h3,
+.countdown-section h2{
   font-size:60px;
   font-family:'Cormorant Garamond',serif;
   margin-bottom:20px;
@@ -214,7 +237,7 @@ button:hover{
   top:0;
   left:0;
   opacity:0;
-  transition:0.5s;
+  transition:1s;
 }
 
 .favorite-slide.active-favorite{
@@ -265,6 +288,46 @@ button:hover{
   right:20px;
 }
 
+/* COUNTDOWN */
+
+.countdown-section{
+  background:#edf3ea;
+}
+
+#countdown{
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  flex-wrap:wrap;
+  margin-top:50px;
+}
+
+.count-box{
+  width:150px;
+  height:150px;
+  background:white;
+  border-radius:30px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  box-shadow:0 10px 30px rgba(0,0,0,0.05);
+}
+
+.count-box span{
+  font-size:50px;
+  font-family:'Cormorant Garamond',serif;
+  color:#7b9272;
+}
+
+.count-box p{
+  margin-top:10px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  font-size:13px;
+  color:#7b9272;
+}
+
 /* EVENT */
 
 .event-grid{
@@ -285,7 +348,7 @@ button:hover{
   display:block;
   letter-spacing:4px;
   font-size:12px;
-  color:#b08b67;
+  color:#8ea284;
   margin-bottom:20px;
 }
 
@@ -305,8 +368,16 @@ button:hover{
 .formal-text{
   font-size:58px;
   font-family:'Cormorant Garamond',serif;
-  color:#b08b67;
+  color:#8ea284;
   animation:pulse 2s infinite;
+}
+
+.dress-note{
+  margin-top:18px;
+  font-size:16px;
+  color:#6d7c68;
+  letter-spacing:1px;
+  line-height:1.7;
 }
 
 /* MENU */
@@ -319,16 +390,26 @@ button:hover{
   flex-wrap:wrap;
 }
 
+/* RSVP BUTTONS */
+
+.rsvp-buttons{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+  margin-top:40px;
+}
+
 /* REGALOS */
 
 .regalos{
-  background:#e8d8ca;
+  background:#e8efe4;
 }
 
 /* FOOTER */
 
 .footer{
-  background:#dcc7b5;
+  background:#dfe8dc;
 }
 
 @keyframes pulse{
@@ -343,6 +424,32 @@ button:hover{
 
   100%{
     transform:scale(1);
+  }
+
+}
+
+@keyframes float{
+
+  from{
+    transform:translateY(0);
+  }
+
+  to{
+    transform:translateY(-120px);
+  }
+
+}
+
+@keyframes fadeUp{
+
+  from{
+    opacity:0;
+    transform:translateY(40px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
   }
 
 }
@@ -365,7 +472,7 @@ button:hover{
 
     width:100%;
 
-    background:#efe4d7;
+    background:#f5f1ea;
 
     flex-direction:column;
 
@@ -389,13 +496,23 @@ button:hover{
   .section h2,
   .event-section h2,
   .menu-section h2,
-  .footer h3{
+  .footer h3,
+  .countdown-section h2{
     font-size:42px;
   }
 
   .story-slider,
   .favorite-slider{
     height:340px;
+  }
+
+  .count-box{
+    width:120px;
+    height:120px;
+  }
+
+  .count-box span{
+    font-size:38px;
   }
 
   button{
