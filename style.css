@@ -74,7 +74,7 @@ body{
   width:100%;
   height:100vh;
 
-  background-image:url('images/IMG_3567.JPG');
+  background-image:url('images/favoritas/IMG_3567.JPG');
 
   background-size:cover;
   background-position:center;
@@ -234,6 +234,16 @@ button:hover{
 }
 
 /* STORY */
+
+.story-slider{
+  width:100%;
+  max-width:900px;
+  height:520px;
+  margin:60px auto 0;
+  position:relative;
+  overflow:hidden;
+  border-radius:30px;
+}
 
 .story-slide{
   width:1024px;
