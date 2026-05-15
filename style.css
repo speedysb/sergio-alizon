@@ -237,8 +237,9 @@ button:hover{
 
 .story-slider{
   width:100%;
-  max-width:1100px;
-  height:700px;
+  max-width:1200px;
+
+  aspect-ratio:16 / 9;
 
   margin:60px auto 0;
 
@@ -555,7 +556,14 @@ button:hover{
   }
 
   .story-slider{
-    height:400px;
+    height:300px;
+    max-width:95%;
+    background:#000;
+  }
+
+  .story-slide{
+    object-fit:contain;
+    background:#000;
   }
 
   .favorite-slider{
