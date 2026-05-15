@@ -434,8 +434,19 @@ button:hover{
   background:#e8efe4;
 }
 
+.gift-info{
+  margin-top:40px;
+}
+
 .zelle-text{
-  margin-top:30px;
+  margin-top:10px;
+  font-size:24px;
+  color:#7b9272;
+  font-family:'Cormorant Garamond',serif;
+}
+
+.cashapp-text{
+  margin-top:15px;
   font-size:24px;
   color:#7b9272;
   font-family:'Cormorant Garamond',serif;
